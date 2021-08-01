@@ -1,26 +1,60 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from 'react-router-dom';
+import Menu from './components/Menu';
+import Sign from './views/Sign';
+import Home from './views/Home';
+import Explore from './views/Explore';
+import Messages from './views/Messages';
+import Notifications from './views/Notifications';
+import Bookmarks from './views/Bookmarks';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Search from './components/Search';
+import Footer from './components/Footer';
+
+const App = () => {
+    return (
+        <div className="App">
+            <Router>
+                <Switch>
+                    <Route path="/sign">
+                        <Sign/>
+                        <Footer/>
+                    </Route>
+                    <Route path="/">
+                        <div className="container">
+                            <aside>
+                                <Menu/>
+                            </aside>
+                            <Switch>
+                                <Route exact path="/">
+                                    <Home/>
+                                </Route>
+                                <Route path="/explore">
+                                    <Explore/>
+                                </Route>
+                                <Route path="/notifications">
+                                    <Notifications/>
+                                </Route>
+                                <Route path="/messages">
+                                    <Messages/>
+                                </Route>
+                                <Route path="/bookmarks">
+                                    <Bookmarks/>
+                                </Route>
+                            </Switch>
+                            <aside>
+                                <Search/>
+                            </aside>
+                        </div>
+                    </Route>
+                </Switch>
+            </Router>
+        </div>
+    );
+};
 
 export default App;

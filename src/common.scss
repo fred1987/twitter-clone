@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  max-width: 1265px;
+  margin: 0 auto;
+
+  main {
+    flex: 0 1 990px;
+  }
+
+  aside {
+    flex: 0 1 275px;
+  }
+}

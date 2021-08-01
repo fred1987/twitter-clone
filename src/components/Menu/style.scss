@@ -1,0 +1,46 @@
+@import "../../variables";
+
+.menu {
+  position: sticky;
+  height: 100vh;
+
+  ul {
+    list-style: none;
+
+    li {
+      a {
+        color: rgb(15, 20, 25);
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 700;
+        font-size: 20px;
+        border-radius: 999px;
+        text-decoration: none;
+        padding: 12px;
+        transition: background-color, color ease .15s;
+
+        span {
+          margin: 0 16px 0 20px;
+        }
+
+        &:hover {
+          color: $blue;
+          background-color: $blue-plain-hover;
+
+          .icon {
+            fill: $blue;
+          }
+        }
+
+        &.selected {
+          color: $blue;
+
+          .icon {
+            fill: $blue;
+          }
+        }
+      }
+    }
+  }
+}

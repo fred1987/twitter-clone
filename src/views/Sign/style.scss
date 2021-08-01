@@ -1,0 +1,49 @@
+.sign {
+  height: calc(100vh - 72px);
+  min-height: 672px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: url('../../assets/img/lohp_1302x955.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  .content {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 730px;
+      min-width: 437px;
+
+      .logo {
+        align-self: self-start;
+      }
+
+      .title {
+        overflow-wrap: break-word;
+        font-size: 64px;
+        line-height: 84px;
+        margin: 48px 0;
+        font-weight: 700;
+      }
+
+      .call-to-action {
+        line-height: 36px;
+        margin-bottom: 32px;
+        font-size: 31px;
+        font-weight: 700;
+      }
+    }
+  }
+}

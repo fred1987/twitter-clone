@@ -1,0 +1,78 @@
+@import "../../../variables";
+
+.input {
+  padding: 12px 0;
+
+  .wrapper {
+    display: flex;
+    border: 1px solid rgb(207, 217, 222);
+    border-radius: 4px;
+    height: 60px;
+    padding: 12px 8px 8px 8px;
+    position: relative;
+    align-items: flex-end;
+
+    &:focus-within {
+      border: 1px solid $blue;
+      box-shadow: $blue 0 0 0 1px;
+    }
+
+    .placeholder {
+      font-size: 17px;
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgb(83, 100, 113);
+      user-select: none;
+      transition: top, font-size ease .15s;
+    }
+
+    input {
+      font-size: 17px;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      height: 22px;
+
+      &:focus {
+        & + .placeholder {
+          color: $blue;
+        }
+      }
+
+      &:focus,
+      &:not([value='']) {
+
+        & + .placeholder {
+          font-size: small;
+          top: 8px;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &.error {
+    .wrapper {
+      border: 1px solid $error;
+      box-shadow: none;
+
+      input {
+        &:focus,
+        &:not([value='']) {
+          & + .placeholder {
+            color: $error;
+          }
+        }
+      }
+    }
+
+    .error-text {
+      line-height: 16px;
+      font-weight: 400;
+      font-size: 13px;
+      color: $error;
+    }
+  }
+}
