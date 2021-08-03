@@ -1,0 +1,27 @@
+.context-menu {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    padding: 16px;
+    transition: background-color ease .2s;
+    user-select: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .03);
+    }
+
+    .icon {
+      span {
+        font-size: 20px;
+      }
+
+    }
+
+    .text {
+      margin-left: 15px;
+    }
+  }
+
+}

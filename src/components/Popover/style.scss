@@ -1,0 +1,22 @@
+@import "../../variables";
+
+.popover {
+  position: relative;
+
+  .content {
+    background-color: #fff;
+    position: absolute;
+    z-index: 777;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+
+    &.right-bottom {
+      right: 11px;
+    }
+
+    &.right-top {
+      right: 11px;
+      top: 11px;
+    }
+  }
+}

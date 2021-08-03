@@ -1,13 +1,13 @@
-import './style.scss';
-import {useState} from 'react';
+import './style.scss'
+import {useState} from 'react'
 
 const Search = () => {
     const [listVisible, setListVisible] = useState(false);
 
     return (
         <div className="search">
-            <div className="input">
-                <span className="material-icons">search</span>
+            <div className="search-input">
+                <span className="material-icons search-icon">search</span>
                 <input
                     type="text"
                     placeholder="Поиск в Твиттере"
@@ -27,4 +27,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default Search

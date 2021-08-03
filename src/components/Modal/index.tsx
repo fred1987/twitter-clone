@@ -1,7 +1,7 @@
 import './style.scss';
 import ReactDom from 'react-dom';
-import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
-import Button from '../UI/Button';
+import {ReactComponent as TwitterIcon} from '@assets/icons/twitter.svg';
+import Button from '@components/UI/Button';
 import classnames from 'classnames';
 
 type Action = {
@@ -34,8 +34,8 @@ const Modal = ({
     if (!visibility || !portalDOMElement) return null;
     return ReactDom.createPortal(
         <>
-            <div className="modal" style={{ width }}>
-                <div className={classnames('top', { 'border-bottom': !logo })}>
+            <div className="modal" style={{width}}>
+                <div className={classnames('top', {'border-bottom': !logo})}>
                     {logo && <div className="logo"><TwitterIcon height={35} fill="#1da1f2"/></div>}
                     {
                         title ?
@@ -47,7 +47,8 @@ const Modal = ({
                         className="close-modal"
                     >
                     <span className="material-icons md-18">close</span>
-                        {actionTop && <Button title={actionTop.title} action={actionTop.action} type={actionTop?.type}/>}
+                        {actionTop &&
+                        <Button title={actionTop.title} action={actionTop.action} type={actionTop?.type}/>}
                 </span>
                 </div>
                 <div className="content">

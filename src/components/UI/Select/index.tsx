@@ -8,8 +8,6 @@ const Select = ({
                     list = []
                 }: ISelect) => {
 
-    //const selectRef: RefObject<HTMLDivElement> = useClickOutside(() => setListVisibility(false));
-
     return (
         <div className="select">
             <span className="placeholder">

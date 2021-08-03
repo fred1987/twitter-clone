@@ -1,10 +1,10 @@
 import './style.scss';
-import Registry from './components/Registry';
-import Login from './components/Login';
-import Button from '../../components/UI/Button';
-import Modal from '../../components/Modal';
-import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
-import { useState } from 'react';
+import Registry from '@components/Auth/Registry';
+import Login from '@components/Auth/Login';
+import Button from '@components/UI/Button';
+import Modal from '@components/Modal';
+import {ReactComponent as TwitterIcon} from '@assets/icons/twitter.svg';
+import {useState} from 'react';
 
 const Sign = () => {
     const [modalVisibility, setModalVisibility] = useState('');
@@ -25,11 +25,11 @@ const Sign = () => {
                     <Button
                         title="Зарегистрироваться"
                         action={() => setModalVisibility('registry')}
-                        style={{ width: '380px', marginBottom: '20px' }}
+                        style={{width: '380px', marginBottom: '20px'}}
                     />
                     <Button
                         title="Войти"
-                        style={{ width: '380px' }}
+                        style={{width: '380px'}}
                         action={() => setModalVisibility('login')}
                         plain
                     />

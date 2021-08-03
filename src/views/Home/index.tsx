@@ -1,9 +1,10 @@
 import './style.scss';
+import Twit from "@components/Twit";
 
 const Home = () => {
     return (
         <main>
-            Home
+            <Twit/>
         </main>
     );
 

@@ -1,9 +1,9 @@
 import './style.scss';
 import Schema from './validateSchema';
-import { Form, Formik } from 'formik';
-import Button from '../../../../components/UI/Button';
-import Input from '../../../../components/UI/Input';
-import Select from '../../../../components/UI/Select';
+import {Form, Formik} from 'formik';
+import Button from '@components/UI/Button';
+import Input from '@components/UI/Input';
+import Select from '@components/UI/Select';
 
 const Registry = () => {
     return (
@@ -56,18 +56,18 @@ const Registry = () => {
                                 value={values.month}
                                 onChange={handleChange}
                                 list={[
-                                    { label: 'января', id: '1' },
-                                    { label: 'февраля', id: '2' },
-                                    { label: 'марта', id: '3' },
-                                    { label: 'апреля', id: '4' },
-                                    { label: 'мая', id: '5' },
-                                    { label: 'июня', id: '6' },
-                                    { label: 'июля', id: '7' },
-                                    { label: 'августа', id: '8' },
-                                    { label: 'сентября', id: '9' },
-                                    { label: 'октября', id: '10' },
-                                    { label: 'ноября', id: '11' },
-                                    { label: 'декабря', id: '12' }
+                                    {label: 'января', id: '1'},
+                                    {label: 'февраля', id: '2'},
+                                    {label: 'марта', id: '3'},
+                                    {label: 'апреля', id: '4'},
+                                    {label: 'мая', id: '5'},
+                                    {label: 'июня', id: '6'},
+                                    {label: 'июля', id: '7'},
+                                    {label: 'августа', id: '8'},
+                                    {label: 'сентября', id: '9'},
+                                    {label: 'октября', id: '10'},
+                                    {label: 'ноября', id: '11'},
+                                    {label: 'декабря', id: '12'}
                                 ]}
                             />
                             <Select
@@ -75,18 +75,18 @@ const Registry = () => {
                                 placeholder="День"
                                 value={values.day}
                                 onChange={handleChange}
-                                list={Array.from({ length: 31 }, (v, i) => ({ label: `${i + 1}`, id: `${i + 1}` }))}
+                                list={Array.from({length: 31}, (v, i) => ({label: `${i + 1}`, id: `${i + 1}`}))}
                             />
                             <Select
                                 name="year"
                                 placeholder="Год"
                                 value={values.year}
                                 onChange={handleChange}
-                                list={Array.from({ length: 30 }, (v, i) => ({ label: `${1980 + i}`, id: `${1980 + i}` }))}
+                                list={Array.from({length: 30}, (v, i) => ({label: `${1980 + i}`, id: `${1980 + i}`}))}
                             />
                         </div>
                         <Button
-                            style={{ marginTop: '20px' }}
+                            style={{marginTop: '20px'}}
                             title="Далее"
                         />
                     </Form>

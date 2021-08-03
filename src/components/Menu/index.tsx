@@ -3,15 +3,15 @@ import {
     NavLink
 } from 'react-router-dom';
 
-import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
-import { ReactComponent as BookmarkIcon } from '../../assets/icons/bookmark.svg';
-import { ReactComponent as ElseIcon } from '../../assets/icons/else.svg';
-import { ReactComponent as ListIcon } from '../../assets/icons/list.svg';
-import { ReactComponent as MessageIcon } from '../../assets/icons/message.svg';
-import { ReactComponent as ProfileIcon } from '../../assets/icons/profile.svg';
-import { ReactComponent as ReviewIcon } from '../../assets/icons/review.svg';
-import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
-import { ReactComponent as NoticeIcon } from '../../assets/icons/notice1.svg';
+import {ReactComponent as HomeIcon} from '@assets/icons/home.svg';
+import {ReactComponent as BookmarkIcon} from '@assets/icons/bookmark.svg';
+import {ReactComponent as ElseIcon} from '@assets/icons/else.svg';
+import {ReactComponent as ListIcon} from '@assets/icons/list.svg';
+import {ReactComponent as MessageIcon} from '@assets/icons/message.svg';
+import {ReactComponent as ProfileIcon} from '@assets/icons/profile.svg';
+import {ReactComponent as ReviewIcon} from '@assets/icons/review.svg';
+import {ReactComponent as TwitterIcon} from '@assets/icons/twitter.svg';
+import {ReactComponent as NoticeIcon} from '@assets/icons/notice1.svg';
 
 const Menu = () => {
     return (

@@ -1,8 +1,8 @@
 import './style.scss';
 import Schema from './validateSchema';
-import { Form, Formik } from 'formik';
-import Button from '../../../../components/UI/Button';
-import Input from '../../../../components/UI/Input';
+import {Form, Formik} from 'formik';
+import Button from '@components/UI/Button';
+import Input from '@components/UI/Input';
 
 const Login = () => {
     return (
@@ -44,7 +44,7 @@ const Login = () => {
                             error={errors.password && touched.password ? errors.password : ''}
                         />
                         <Button
-                            style={{ marginTop: '20px' }}
+                            style={{marginTop: '20px'}}
                             title="Войти"
                         />
                     </Form>
