@@ -16,8 +16,8 @@ const Button = ({
             style={style}
             className={classnames('btn', mode, {plain, type, disabled})}
         >
-      {title}
-    </span>
+            {title}
+        </span>
     );
 };
 

@@ -36,10 +36,14 @@ body {
   }
 
   aside {
-    flex: 0 1 350px;
+    &.left {
+      flex: 0 1 275px;
+      padding: 0 12px;
+    }
 
     &.right {
       padding-top: 12px;
+      flex: 0 1 350px;
     }
   }
 }

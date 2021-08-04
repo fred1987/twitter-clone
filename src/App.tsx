@@ -27,7 +27,7 @@ const App = () => {
                     </Route>
                     <Route path="/">
                         <div className="container">
-                            <aside>
+                            <aside className="left">
                                 <Menu/>
                             </aside>
                             <Switch>
