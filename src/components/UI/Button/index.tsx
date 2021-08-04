@@ -12,7 +12,7 @@ const Button = ({
                 }: IButton) => {
     return (
         <span
-            onClick={() => disabled && action()}
+            onClick={() => !disabled && action()}
             style={style}
             className={classnames('btn', mode, {plain, type, disabled})}
         >
