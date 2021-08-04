@@ -2,6 +2,7 @@ import './style.scss'
 import {ReactComponent as ActionIcon} from '@assets/icons/action.svg'
 import Popover from "@components/Popover";
 import ContextMenu from "@components/ContextMenu";
+import Ava from "@components/User/ava";
 
 const getMenuContext = (userId: string) => {
     return [
@@ -42,10 +43,9 @@ const getMenuContext = (userId: string) => {
 const Twit = () => {
     return (
         <div className="twit">
-            <span
-                className="avatar"
-                style={{backgroundImage: 'url(https://i.ytimg.com/vi/FVxKg1GzT1w/default.jpg)'}}
-            />
+            <div className="avatar">
+                <Ava imgUrl="url(https://i.ytimg.com/vi/FVxKg1GzT1w/default.jpg"/>
+            </div>
             <span className="twit-data">
                 <span className="top">
                     <div className="left">

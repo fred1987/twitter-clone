@@ -1,0 +1,31 @@
+.user-avatar {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  cursor: pointer;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, .2) 0 0 2px inset;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: transparent;
+    transition: background-color ease .2s;
+  }
+
+  &:hover {
+    &:after {
+      background-color: rgba(26, 26, 26, .118);
+    }
+  }
+}

@@ -3,16 +3,18 @@ import './style.scss';
 
 const Button = ({
                     title,
+                    mode = 'default',
                     type = 'primary',
                     plain = false,
+                    disabled = false,
                     style,
                     action = () => undefined
                 }: IButton) => {
     return (
         <span
-            onClick={action}
+            onClick={() => disabled && action()}
             style={style}
-            className={classnames('btn', { plain, type })}
+            className={classnames('btn', mode, {plain, type, disabled})}
         >
       {title}
     </span>

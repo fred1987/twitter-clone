@@ -1,0 +1,61 @@
+@import "../../../variables";
+
+
+.twit-top {
+  margin: 4px 0;
+  padding: 0 16px;
+  display: flex;
+
+  .ava-wrapper {
+    margin-right: 12px;
+  }
+
+  .content {
+    min-height: 20px;
+    position: relative;
+    width: 100%;
+
+    .textarea {
+      -webkit-user-modify: read-write-plaintext-only;
+      width: 100%;
+      min-height: 157px;
+      height: auto;
+      outline: 0;
+      font-size: 20px;
+
+      &:not(:empty) + .preview {
+        display: none;
+      }
+    }
+
+    .preview {
+      position: absolute;
+      height: 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      user-select: none;
+      color: #536471;
+      font-size: 20px;
+      z-index: -1;
+    }
+
+    .action-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid $border-color;
+      height: 52px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .left {
+        display: flex;
+        align-items: center;
+      }
+
+    }
+  }
+}

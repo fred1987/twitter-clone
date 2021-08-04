@@ -67,10 +67,10 @@ const Menu = () => {
                         <span>Профиль</span>
                     </NavLink>
                 </li>
-                <li>
-                    <ElseIcon height={30} className="icon"/>
-                    <span>Еще</span>
-                </li>
+                {/*<li>*/}
+                {/*    <ElseIcon height={30} className="icon"/>*/}
+                {/*    <span>Еще</span>*/}
+                {/*</li>*/}
             </ul>
         </nav>
     );
