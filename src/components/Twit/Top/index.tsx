@@ -12,7 +12,7 @@ const TwitTop = () => {
     const textareaRef = useRef<HTMLDivElement>(null);
     const [text, setText] = useState('')
 
-    //TODO придумать как это будет работать
+    //TODO придумать как это будет работать (npm react-contenteditable)
     const getText = (e: KeyboardEvent<HTMLDivElement>) => {
         textareaRef.current && setText(textareaRef.current.innerText)
     }
