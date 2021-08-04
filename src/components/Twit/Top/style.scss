@@ -23,6 +23,7 @@
       height: auto;
       outline: 0;
       font-size: 20px;
+      padding-bottom: 62px;
 
       &:not(:empty) + .preview {
         display: none;
