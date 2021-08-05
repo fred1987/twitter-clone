@@ -1,6 +1,6 @@
 import './style.scss'
 import Ava from "@components/User/ava";
-import {useRef, useState, KeyboardEvent} from "react";
+import {useRef, useState, KeyboardEvent, MouseEvent} from "react";
 import Button from "@components/UI/Button";
 import {ReactComponent as ImgIcon} from "@assets/icons/img.svg";
 import {ReactComponent as GifIcon} from "@assets/icons/gif.svg";
@@ -17,6 +17,11 @@ const TwitTop = () => {
         textareaRef.current && setText(textareaRef.current.innerText)
     }
 
+    //обработка событий клика на меню экшенов
+    const action = (e: MouseEvent, data: string) => {
+        e.stopPropagation()
+    }
+
     return (
         <div className="twit-top">
             <div className="ava-wrapper">
@@ -27,19 +32,19 @@ const TwitTop = () => {
                 <span className="preview">Что происходит?</span>
                 <div className="action-block">
                     <div className="left">
-                        <span className="svg-btn" onClick={(e) => e.stopPropagation()}>
+                        <span className="svg-btn" onClick={(e) => action(e, 'action')}>
                             <ImgIcon fill="#1da1f2"/>
                         </span>
-                        <span className="svg-btn" onClick={(e) => e.stopPropagation()}>
+                        <span className="svg-btn" onClick={(e) => action(e, 'action')}>
                             <GifIcon fill="#1da1f2"/>
                         </span>
-                        <span className="svg-btn" onClick={(e) => e.stopPropagation()}>
+                        <span className="svg-btn" onClick={(e) => action(e, 'action')}>
                             <PollIcon fill="#1da1f2"/>
                         </span>
-                        <span className="svg-btn" onClick={(e) => e.stopPropagation()}>
+                        <span className="svg-btn" onClick={(e) => action(e, 'action')}>
                             <SmileIcon fill="#1da1f2"/>
                         </span>
-                        <span className="svg-btn" onClick={(e) => e.stopPropagation()}>
+                        <span className="svg-btn" onClick={(e) => action(e, 'action')}>
                             <ScheduleIcon fill="#1da1f2"/>
                      </span>
                     </div>
